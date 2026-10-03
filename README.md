@@ -1,16 +1,27 @@
-# Manufacturing Defect Detection Dashboard
+# Manufacturing Defect Detection
 
-PBL dashboard for the Manufacturing Defect Detection project.
+AI-based steel surface defect classification using a fine-tuned ResNet50 deep learning model.
 
-## What it does
+## 🚀 Live Demo
 
-- Upload a steel-surface image.
-- Run the fine-tuned ResNet50 model.
-- Display the predicted defect.
-- Display confidence.
-- Display probabilities for all six NEU defect classes.
+[Open the Manufacturing Defect Detection Dashboard](https://manufacturing-defect-detection-zr5asxphznfacqchsayq6p.streamlit.app/)
 
-Classes:
+## 📌 Project Overview
+
+This project uses Deep Learning and Transfer Learning to automatically classify defects present on steel surface images.
+
+The system uses a fine-tuned ResNet50 model trained on the NEU Surface Defect Dataset.
+
+## 🎯 Objective
+
+To develop an automated manufacturing defect detection system that can classify steel surface defects from uploaded images.
+
+## 🧠 Model
+
+**Fine-tuned ResNet50**
+
+The model classifies images into six defect categories:
+
 1. Crazing
 2. Inclusion
 3. Patches
@@ -18,19 +29,38 @@ Classes:
 5. Rolled-in Scale
 6. Scratches
 
-## Required model
+## 📊 Model Performance
 
-Put the trained file below in this same folder:
+| Model | Validation Accuracy |
+|---|---:|
+| Baseline CNN | 42.50% |
+| Regularized CNN | 32.22% |
+| ResNet50 Transfer Learning | 98.89% |
+| Fine-tuned ResNet50 | 99.17% |
 
-`final_manufacturing_defect_resnet50.keras`
+## 🛠️ Technologies Used
 
-This is the exact model filename used by the Colab notebook.
+- Python
+- TensorFlow
+- Keras
+- ResNet50
+- NumPy
+- Streamlit
+- Hugging Face Hub
+- Google Colab
 
-## Run
+## 🔄 How It Works
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-The dashboard resizes the image to 128x128 RGB before inference. The saved model already contains the ResNet50 preprocessing layer, matching the notebook's inference workflow.
+Steel Surface Image
+        ↓
+Image Upload
+        ↓
+Preprocessing
+        ↓
+Fine-tuned ResNet50
+        ↓
+Defect Classification
+        ↓
+Predicted Defect + Confidence
+        ↓
+Class Probabilities
