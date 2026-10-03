@@ -4,7 +4,7 @@ AI-based steel surface defect classification using a fine-tuned ResNet50 deep le
 
 ## 🚀 Live Demo
 
-[Open the Manufacturing Defect Detection Dashboard]https://manufacturing-defect-detection-zr5asxphznfaqcghsayq6p.streamlit.app/
+[Open the Manufacturing Defect Detection Dashboard](https://manufacturing-defect-detection-zr5asxphznfaqcghsayq6p.streamlit.app/)
 
 
 ## 📌 Project Overview
