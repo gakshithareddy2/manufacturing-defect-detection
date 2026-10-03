@@ -4,7 +4,7 @@ import numpy as np
 import streamlit as st
 import tensorflow as tf
 from PIL import Image
-
+from huggingface_hub import hf_hub_download
 
 # ============================================================
 # PAGE CONFIGURATION
@@ -22,9 +22,9 @@ st.set_page_config(
 # ============================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(
-    BASE_DIR,
-    "final_manufacturing_defect_resnet50.keras"
+MODEL_PATH = hf_hub_download(
+    repo_id="Akshi6789/manufacturing-defect-resnet50",
+    filename="final_manufacturing_defect_resnet50 (1).keras"
 )
 
 CLASS_NAMES = [
